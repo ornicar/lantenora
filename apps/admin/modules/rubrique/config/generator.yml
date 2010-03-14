@@ -1,0 +1,35 @@
+generator:
+  class: dmAdminDoctrineGenerator
+  param:
+    model_class: Rubrique
+    theme: dmAdmin
+    non_verbose_templates: true
+    with_show: false
+    route_prefix: rubrique
+    with_doctrine_route: false
+    config:
+      actions: ~
+      fields:
+        is_active:
+          label: Active
+      list:
+        display:
+          - '=nom'
+          - is_active
+        sort:
+          - position
+          - asc
+        table_method: getAdminListQuery
+        table_count_method: ~
+      filter:
+        display:
+          - nom
+          - is_active
+      form:
+        display:
+          NONE: [nom, is_active]
+        class: RubriqueAdminForm
+        fields: {  }
+      edit: ~
+      new: ~
+    sortable: true

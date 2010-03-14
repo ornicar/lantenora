@@ -1,0 +1,14 @@
+div.lexique.list
+{
+  margin: 10px;
+}
+
+div.lexique div.markdown
+{
+  margin-bottom: 20px;
+  border: 1px solid #222;
+  padding: 1em 1em 0 1em;
+  margin-top: -4px;
+  background: #111;
+  font-size: 13px;
+}

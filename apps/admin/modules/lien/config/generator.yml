@@ -1,0 +1,47 @@
+generator:
+  class: dmAdminDoctrineGenerator
+  param:
+    model_class: Lien
+    theme: dmAdmin
+    non_verbose_templates: true
+    with_show: false
+    route_prefix: lien
+    with_doctrine_route: false
+    config:
+      actions: ~
+      fields:
+        is_active:
+          label: Active
+      list:
+        display:
+          - '=nom'
+          - lien_type_id
+          - url
+          - description
+          - is_active
+          - created_at
+          - updated_at
+        sort:
+          - position
+          - asc
+        table_method: getAdminListQuery
+        table_count_method: ~
+      filter:
+        display:
+          - nom
+          - is_active
+          - lien_type_id
+          - url
+          - description
+          - created_at
+          - updated_at
+      form:
+        display:
+          NONE: [nom, is_active, lien_type_id]
+          Description: [description]
+          Others: [url]
+        class: LienAdminForm
+        fields: {  }
+      edit: ~
+      new: ~
+    sortable: true

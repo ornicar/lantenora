@@ -1,0 +1,33 @@
+prod:
+  logger:
+    class:   sfNoLogger
+    param:
+      level:   err
+      loggers: ~
+
+cli:
+  controller:
+    class: sfConsoleController
+  request:
+    class: sfConsoleRequest
+  response:
+    class: sfConsoleResponse
+
+test:
+  storage:
+    class: sfSessionTestStorage
+    param:
+      session_path: %SF_TEST_CACHE_DIR%/sessions
+
+  response:
+    param:
+      send_http_headers: false
+
+all:
+
+  logger:
+    param:
+      loggers:
+        sf_web_debug:
+          param:
+            xdebug_logging: true

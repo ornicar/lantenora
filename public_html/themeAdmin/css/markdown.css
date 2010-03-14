@@ -1,0 +1,23 @@
+div.ac_results {
+  background: #fff;
+  border: 1px solid #aaa;
+}
+
+div.ac_results li {
+  padding: 5px;
+  color: #222;
+}
+
+div.ac_results li.ac_even {
+  background: #ddd;
+}
+
+div.ac_results li.ac_over {
+  background: #046BCA;
+  color: #fff;
+}
+
+div.ac_results li strong {
+  font-weight: bold;
+  color: #000;
+}

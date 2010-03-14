@@ -1,0 +1,42 @@
+generator:
+  class: dmAdminDoctrineGenerator
+  param:
+    model_class: DmUser
+    theme: dmAdmin
+    non_verbose_templates: true
+    with_show: false
+    route_prefix: auteur
+    with_doctrine_route: false
+    config:
+      actions: ~
+      fields:
+        is_visible:
+          label: Visible
+        username:
+          label: Identifiant
+      list:
+        display:
+          - =username
+          - =media_id
+          - nom
+          - email
+          - description
+          - last_login
+          - is_visible
+          - created_at
+          - updated_at
+        sort:
+          - created_at
+          - desc
+        table_method: getAdminListQuery
+        table_count_method: ~
+      form:
+        display:
+          NONE: [username, password, nom, password_again, email, is_visible]
+          Image: [media_id_form, media_id_view]
+          Texte: [description]
+        class: auteurAdminForm
+        fields: {  }
+      edit: ~
+      new: ~
+    sortable: false

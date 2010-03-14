@@ -1,0 +1,25 @@
+div.rubrique.list {
+	margin-bottom: 10px;
+}
+
+div.rubrique.list .link {
+  height: 40px;
+  line-height: 40px;
+  padding-left: 10px;
+  text-decoration: none;
+  display: block;
+  font-weight: bold;
+  letter-spacing: 2px;
+  -moz-border-radius: 4px;
+}
+
+div.rubrique.list .link.dm_current,
+div.rubrique.list .link.dm_parent {
+  background: url(../images/menu_left_item_bg.png) top left no-repeat;
+  background-position: 0 -40px;
+}
+
+#dm_page div.rubrique.list a.link:hover {
+  background: url(../images/menu_left_item_bg.png) top left no-repeat;
+  color: #000;
+}

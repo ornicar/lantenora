@@ -1,0 +1,60 @@
+generator:
+  class: dmAdminDoctrineGenerator
+  param:
+    model_class: Image
+    theme: dmAdmin
+    non_verbose_templates: true
+    with_show: false
+    route_prefix: image
+    with_doctrine_route: false
+    config:
+      actions: ~
+      fields:
+        tags_list:
+          label: Tags
+        is_top:
+          label: Top
+        nom:
+          help: "Nom de la photo. Obligatoire ! Plusieurs photos peuvent avoir le même nom."
+        date:
+          help: "Date de la prise. Exemple : mars 2008"
+        tags_edit:
+          label:                     "Modifier les tags"
+          help: "Liste des tags séparés par une virgule. Exemple : cerf, nuit, forêt, noir"           
+        rubrique_id:                  
+          label:                     Galerie
+          help: "Galerie dans laquelle est rangée la photo"
+        is_active:
+          label:                     "Publiée"
+          help: "La photo est-elle visible sur le site ?"
+        tags_text:
+          label:  Tags associés
+      list:
+        display:
+          - =media_id
+          - '=nom'
+          - rubrique_id
+          - tags_list
+          - description
+          - is_top
+          - is_active
+          - created_at
+          - updated_at
+        sort:
+          - position
+          - asc
+        table_method: getAdminListQuery
+        table_count_method: ~
+      filter:
+        display: []
+      form:
+        display:
+          NONE: [nom, is_active, rubrique_id, is_top, date, user_id]
+          Photo: [media_id_form, media_id_view]
+          Tags: [tags_text]
+          Description: [description]
+        class: ImageAdminForm
+        fields: {  }
+      edit: ~
+      new: ~
+    sortable: true

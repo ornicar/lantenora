@@ -1,0 +1,62 @@
+.markdown {
+	text-align: left;
+}
+
+.markdown p {
+  margin-bottom: 1em;
+}
+
+.markdown li p {
+  display: inline;
+}
+
+.markdown h2 {
+  font-size: 200%;
+}
+
+.markdown h3 {
+  font-size: 160%;
+}
+
+.markdown h4 {
+  font-size: 120%;
+  font-weight: bold;
+}
+
+.markdown em {
+	font-style: italic;
+}
+
+.markdown strong {
+  font-weight: bold;
+}
+
+.markdown ul {
+  margin: 12px 0 10px 10px;
+}
+.markdown ul li {
+  list-style: circle;
+  list-style-position: inside;
+}
+
+.markdown p.first_p {
+  min-height: 2.5em;
+}
+
+.markdown p.first_p:FIRST-LETTER {
+  font: normal 3.5em Georgia, 'Times New Roman', Times, Serif;
+  color: #666;
+  float: left;
+  margin-right: 10px;
+  display: block;
+}
+.no_first_letter .markdown p.first_p:FIRST-LETTER {
+  font: inherit;
+  color: inherit;
+  float: none;
+  margin: 0;
+}
+
+.no_first_letter .markdown p.first_p {
+  min-height: inherit;
+}

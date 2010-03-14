@@ -1,0 +1,28 @@
+div.auteur.list li.element {
+  float:left;
+  width:30%;
+  margin: 10%;
+}
+
+div.auteur.list li.element a.link {
+  display:block;
+  text-align: center;
+  background: #111;
+  height: 100px;
+  line-height: 100px;
+  border: 1px solid #222;
+}
+
+div.auteur.show {
+	margin: 10px 0 0 7px;
+}
+
+img.auteur_image {
+  float: left;
+  border: 3px solid #555;
+  margin: 0 10px 10px 0;
+}
+
+div.auteur_text {
+	margin: 20px 0 0 330px;
+}

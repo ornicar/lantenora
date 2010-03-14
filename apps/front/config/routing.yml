@@ -1,0 +1,3 @@
+rss:
+  url:          /rss/photos
+  params:       { module: image, action: rss }

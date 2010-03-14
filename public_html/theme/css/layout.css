@@ -1,0 +1,87 @@
+html { 
+  background: #000;
+  font-size: 14px;
+}
+
+#dm_page, #dm_page a {
+  color: #ccc;
+  font-family: arial,helvetica,verdana,sans-serif;
+  font-family: 'Trebuchet MS',Tahoma,Verdana,Geneva,Arial;
+}
+
+#dm_page, #dm_page a:hover {
+  color: #fff;
+}
+
+div.dm_layout {
+  position: relative;
+}
+
+div.dm_layout_inner {
+}
+
+div.dm_layout_inner_inner {
+  width: 1000px;
+  margin: auto;
+}
+
+.dm_layout_left {
+  width: 120px;
+  float: left;
+}
+
+.dm_layout_center {
+  float: left;
+  width: 860px;
+  margin-left: 20px;
+}
+
+.dm_layout_top {
+}
+
+.dm_layout_bottom {
+  color: #aaa;
+  padding: 20px;
+  padding-bottom: 10px;
+  background: #1D1D1D;
+}
+
+.dm_content {
+  padding: 5px 9px 0 9px;
+  background: transparent url(../images/bg_center.png) top left no-repeat;
+  min-height: 400px;
+}
+
+body.full_screen .dm_layout_center {
+  margin: 0;
+  width: 100%;
+}
+
+body.full_screen .dm_content {
+  padding: 0;
+  background: #000;
+}
+
+body.full_screen div.dm_layout_inner_inner {
+  margin: auto;
+  width: 100%;
+  text-align: center;
+}
+
+body.full_screen .dm_layout_bottom {
+  padding: 0;
+  background: #000;
+}
+
+.screen_center { 
+  width: 900px;
+  margin: auto;
+}
+
+div.footer_part {
+  font-size: 12px;
+  float: left;
+  width: 46%;
+  margin: 1%;
+  text-align: left;
+}

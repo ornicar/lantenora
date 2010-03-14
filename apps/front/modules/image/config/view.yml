@@ -1,0 +1,14 @@
+rssSuccess:
+  http_metas:
+    content-type: text/xml
+
+  metas:
+    title:        Syndication RSS | Blanc Cerf
+    language:     fr
+    robots:       index, follow
+
+  stylesheets:    [-*]
+
+  javascripts:    [-*]
+
+  has_layout:     false

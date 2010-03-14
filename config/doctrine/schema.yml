@@ -1,0 +1,112 @@
+Invite:
+  actAs:
+    DmSortable:
+    DmGallery:
+    Timestampable:
+  columns:
+    nom:                    { type: string(255), notnull: false, unique: true }
+    is_active:              { type: boolean, notnull: true, default: true }
+
+DmUser:
+  columns:
+    nom:                    { type: string(255), notnull: false }
+    description:            { type: clob, extra: markdown }
+    media_id:               { type: integer, notnull: false }
+    is_visible:             { type: boolean, notnull: true, default: false }
+  relations:
+    Media:
+      class:                DmMedia
+      local:                media_id
+      onDelete:             SET NULL
+
+LienType:
+  actAs:                    [DmSortable, Timestampable]
+  columns:
+    nom:                    { type: string(255) }
+    is_active:              { type: boolean, notnull: true, default: true }
+      
+Lien:
+  actAs:                    [DmSortable, Timestampable]
+  columns:
+    lien_type_id:           { type: integer }
+    nom:                    { type: string(255) }
+    url:                    { type: string(255) }
+    description:            { type: clob, extra: markdown }
+    is_active:              { type: boolean, notnull: true, default: true }
+  relations:
+    Type:
+      class:                LienType
+      local:                lien_type_id
+      foreign:              id
+      onDelete:             CASCADE
+      foreignAlias:         Liens
+
+Rubrique:
+  actAs:                    [DmSortable]
+  columns:
+    nom:                    { type: string(255), notnull: true, unique: true }
+    is_active:              { type: boolean, notnull: true, default: true }
+
+Image:
+  actAs:
+    Sortable:               { new: first }
+    Timestampable:
+  columns:
+    rubrique_id:            { type: integer, notnull: true }
+    user_id:                { type: integer, notnull: true, default: 1 }
+    nom:                    { type: string(255), notnull: true }
+    description:            { type: clob, extra: markdown }
+    media_id:               { type: integer, notnull: true }
+    is_active:              { type: boolean, notnull: true, default: true }
+    is_top:                 { type: boolean, notnull: true, default: false }
+    date:                   { type: string(255), notnull: false }
+  relations:
+    Auteur:
+      class:                DmUser
+      local:                user_id
+      foreignAlias:         Images
+      onDelete:             CASCADE
+    Media:
+      class:                DmMedia
+      local:                media_id
+      onDelete:             CASCADE
+    Rubrique:
+      onDelete:             CASCADE
+      foreignAlias:         Images
+    Tags:
+      class:                Tag
+      refClass:             ImageTag
+    Commentaires:
+      orderBy:              created_at ASC
+      
+ImageTag:
+  columns:
+    image_id:               { type: integer, primary: true }
+    tag_id:                 { type: integer, primary: true }
+  relations:
+    Image:
+      onDelete:             CASCADE
+    Tag:
+      onDelete:             CASCADE
+      
+Tag:
+  columns:
+    nom:                    { type: string(255), notnull: true }
+    strip:                  { type: string(255), notnull: true, unique: true }
+  relations:
+    Images:
+      class:                Image
+      refClass:             ImageTag
+      
+Commentaire:
+  actAs:                    [Timestampable]
+  columns:
+    image_id:               { type: integer, notnull: true }
+    auteur:                 { type: string(255) }
+    texte:                  { type: clob }
+    is_active:              { type: boolean, notnull: true, default: true }
+  relations:
+    Image:
+      onDelete:             CASCADE
+      foreignAlias:         Commentaires
+      orderBy:              created_at ASC

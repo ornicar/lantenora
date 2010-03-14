@@ -1,0 +1,74 @@
+Project:
+
+  Global:
+  
+    main:
+      actions:
+        footer: { cache: static }
+        headLinks: { cache: true }
+      
+  Image:
+  
+    rubrique:
+      name:       Galerie
+      page:       true
+      actions:
+        list:  { cache: true }
+        show:  { cache: true }
+  
+    image:
+      page:       true
+      parent:     rubrique
+      actions:
+        show:  { cache: false }
+        list:  { cache: true }
+        top:   { cache: false }
+        listByRubrique: { filters: [ rubrique ], cache: true }
+        listByTag: { filters: [ tag ], cache: true }
+        listByAuteur: { filters: [ auteur ], cache: true }
+  
+  Tag:
+  
+    tag:
+      page:       true
+      actions:
+        list:  { cache: true }
+        show:  { cache: true }
+        cloud: { cache: true }
+        
+  Invite:
+    invite:
+      name:       Invité
+      page:       true
+      actions:
+        list:   { cache: true }
+        show:   { cache: true }
+  
+  Commentaire:
+  
+    commentaire:
+      parent:     image
+      actions:
+        listByImage: { filters: [ image ], cache: true }
+        form:
+        
+  Sitographie:
+  
+    lien:
+      parent:     lienType
+      name:       Lien
+  
+    lienType:
+      name:       Categ de liens | Categs de liens
+      actions:
+        list:  { cache: true }
+  
+  Auteur:
+      
+    auteur:
+      model:      DmUser
+      page:       true
+      actions:
+        list: { cache: true }
+        show: { cache: true }
+        showName: { cache: true }

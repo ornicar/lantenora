@@ -1,0 +1,15 @@
+.svn
+/cache/*
+/log/*
+/logs
+/domains
+/home
+/homes
+/cgi-bin
+/config/databases.yml
+/config/ProjectConfiguration.class.php
+/data/*
+/symfony-*
+/public_html/uploads/*
+/public_html/dm
+/public_html/cache

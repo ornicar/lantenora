@@ -1,0 +1,91 @@
+div.commentaire.list {
+	margin-right: 320px;
+	font-size: 12px;
+}
+
+div.commentaire.list ul.elements {
+  border: 1px solid #222;
+  border-bottom: none;
+}
+div.commentaire.list li.element {
+  border-bottom: 1px solid #222;
+  padding: 12px;
+}
+div.commentaire.list li.element.pair {
+  background: #111;
+}
+
+div.commentaire.list img {
+  border: 3px solid #111;
+  padding: 5px;
+  margin: 0 10px 10px 0;
+  background: #000;
+}
+div.commentaire.list p.auteur {
+  font-size: 1.5em;
+}
+div.commentaire.list p.auteur a{
+  font-size: 0.8em;
+  margin-left: 12px;
+  border-bottom: 1px dotted #555;
+}
+
+.commentaire_form_wrap {
+  text-align: left;
+  margin-top: 10px;
+  padding-bottom: 10px;
+}
+
+.commentaire_form {
+  background:none repeat scroll 0 0 #111111;
+	border:1px solid #222222;
+	margin-top:-4px;
+	padding:20px;
+}
+.commentaire_form li {
+  padding: 12px 0 12px 0;  margin: 0;  
+}
+.commentaire_form li label {
+  float: left;
+  padding: 5px 15px 5px 5px;
+  text-align: right;
+  color: #aaa;
+  width: 120px;
+}
+.commentaire_form li label.error {
+  float: none;
+  color: red;
+}
+.commentaire_form input, .commentaire_form textarea {
+  padding: 5px;
+  border: 1px solid #222;
+  width: 400px;
+  color: #aaa;
+  background: #000;
+}
+.commentaire_form input:focus, .commentaire_form textarea:focus {
+  color: #fff;
+}
+.commentaire_form textarea {
+  width: 600px;
+  overflow: auto;
+}
+.commentaire_form input.submit {
+  width: auto;
+  margin: 0;
+  padding: 8px; 
+  border: 1px outset #222;
+  margin-left: 140px;
+}
+.commentaire_form input:focus, .commentaire_form textarea:focus {
+}
+
+.form_saved {
+	display: block;
+  margin: 0 0 5px 0;
+  text-align: center;
+  padding: 5px;
+  margin: 0px 15px 15px 10px;  
+  border: 1px solid green;
+  background: #050505;  
+}

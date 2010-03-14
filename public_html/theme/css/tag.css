@@ -1,0 +1,20 @@
+div.tag.list .link {
+  font-size: 11px;
+  line-height: normal;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 5px;
+}
+
+div.tag.cloud {
+  margin: 10px;
+}
+
+div.tag.cloud li {
+  float: left;
+  margin: 0 10px;
+}
+
+div.tag.cloud li .link {
+  text-decoration: none;
+}

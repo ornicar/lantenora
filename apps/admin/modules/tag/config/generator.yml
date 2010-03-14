@@ -1,0 +1,35 @@
+generator:
+  class: dmAdminDoctrineGenerator
+  param:
+    model_class: Tag
+    theme: dmAdmin
+    non_verbose_templates: true
+    with_show: false
+    route_prefix: tag
+    with_doctrine_route: false
+    config:
+      actions: ~
+      fields:
+        images_list:
+          label: Images
+      list:
+        display:
+          - '=nom'
+          - images_list
+        sort:
+          - nom
+          - asc
+        table_method: getAdminListQuery
+        table_count_method: ~
+      filter:
+        display:
+          - nom
+      form:
+        display:
+          NONE: [nom]
+          Images: [images_list]
+        class: TagAdminForm
+        fields: {  }
+      edit: ~
+      new: ~
+    sortable: false

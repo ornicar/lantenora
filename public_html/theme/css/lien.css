@@ -1,0 +1,25 @@
+div.lien_type.list
+{
+  margin: 10px;
+  color: #ccc;
+}
+
+div.lien_type.list ul.liens
+{
+	margin-top:-4px;
+  margin-bottom: 20px;
+  border: 1px solid #222;
+  padding: 1em 1em 0 1em;
+  background: #111;
+  font-size: 13px;
+}
+
+div.lien_type span.url {
+  margin-left: 1em;
+  color: #888;
+  font-size: 11px;
+  text-decoration: none;
+}
+
+div.lien_type .t_medium {
+}

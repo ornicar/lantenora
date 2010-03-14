@@ -1,0 +1,42 @@
+generator:
+  class: dmAdminDoctrineGenerator
+  param:
+    model_class: Invite
+    theme: dmAdmin
+    non_verbose_templates: true
+    with_show: false
+    route_prefix: invite
+    with_doctrine_route: false
+    config:
+      actions: ~
+      fields:
+        is_active:
+          label: Active
+        dm_gallery: Gallery
+      list:
+        display:
+          - '=nom'
+          - dm_gallery
+          - is_active
+          - created_at
+          - updated_at
+        sort:
+          - position
+          - asc
+        table_method: getAdminListQuery
+        table_count_method: ~
+      filter:
+        display:
+          - nom
+          - is_active
+          - created_at
+          - updated_at
+      form:
+        display:
+          NONE: [nom, is_active]
+          Gallery: [dm_gallery]
+        class: InviteAdminForm
+        fields: {  }
+      edit: ~
+      new: ~
+    sortable: true

@@ -1,0 +1,32 @@
+.t_site, #dm_page .t_site {
+  color: #000;
+  font-size: 0;
+  background: url(../images/logo200.png) top left no-repeat;
+  width: 200px;
+  height: 57px;
+  display: block;
+  margin: 5px 0 0 -70px;
+}
+
+.t_site.link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.t_big {
+  font-size:20px;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.t_big span.title_prefix {
+  text-transform: uppercase;
+  color: #777;
+  margin-right: 10px;
+}
+
+.t_medium {
+  color: #bbb;
+  font-size: 17px;
+  font-style: italic;
+}
