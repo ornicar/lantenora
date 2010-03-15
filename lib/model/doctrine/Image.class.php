@@ -12,6 +12,16 @@
  */
 class Image extends BaseImage
 {
+
+  public function getAuteurPage()
+  {
+    return dmDb::query('DmPage p')
+    ->where('p.module = ?', 'auteur')
+    ->andWhere('p.action = ?', 'show')
+    ->andWhere('p.record_id = ?', $this->user_id)
+    ->withI18n()
+    ->fetchOne();
+  }
   
   public function getTagsText()
   {

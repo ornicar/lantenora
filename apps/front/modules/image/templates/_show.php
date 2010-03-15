@@ -12,8 +12,8 @@ echo £o('div#diapo_image.image.big', array('json' => array(
 echo £('div#image_help',
   £('p', £('strong', 'F11').'plein écran').
   £('p', £('strong', 'Echap').'quitter').
-  £('p', £('strong', '&larr;').'précédent').
-  £('p', £('strong', '&rarr;').'suivant').
+  £('p', £('strong', '←').'précédent').
+  £('p', £('strong', '→').'suivant').
   £('p', £('strong', 'Espace').'diaporama')
 );
 
@@ -41,7 +41,7 @@ echo £('h1.t_image', $image->nom);
 echo £o('div.infos_box');
 
 echo £("div.top",
-  £("div", £link($image->Auteur)).
+  £("div", £link($image->auteurPage)).
   £("div.sep", "|").
   £("div", $image->date ? $image->date : format_date($image->createdAt)).
   £("div.sep", "|").
