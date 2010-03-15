@@ -7,7 +7,7 @@ all:
     apc:                  true          # (RECOMMENDED) Use Apc if available
 
   js:
-    compress:             false          # (RECOMMENDED) Performance : Minifies javascripts and put them into a single compressed file
+    compress:             true          # (RECOMMENDED) Performance : Minifies javascripts and put them into a single compressed file
     cdn:
       enabled:            false         # Uses google cdn to load jQuery
     head_inclusion:       [ ]           # If you want some libraries to be included in the <head> section,
