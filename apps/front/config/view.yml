@@ -5,6 +5,7 @@ default:
   metas:
 
   stylesheets:
+    - lib.reset
     - layout
     - main
     - markdown
