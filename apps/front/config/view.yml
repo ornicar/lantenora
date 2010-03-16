@@ -18,6 +18,8 @@ default:
     - auteur
 
   javascripts:
+    - lib.ui-core
+    - lib.ui-widget
     - front
     - image
 
