@@ -10,7 +10,7 @@ $helper->renderHtmlTag(),
     $helper->renderHead(),
   "\n</head>\n",
   
-  $helper->renderBodyTag(),
+  $helper->renderBodyTag('.theme'.$sf_user->getAttribute('theme')),
   
     $sf_content,
     
