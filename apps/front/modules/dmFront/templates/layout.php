@@ -2,6 +2,15 @@
 /** @var dmFrontLayoutHelper */
 $helper = $sf_context->get('layout_helper');
 
+if($theme = $sf_user->getAttribute('theme'))
+{
+  $bodyAttributes = 'style="background: #000 url(/theme/images/bg'.$theme.'.png) top left no-repeat;"';
+}
+else
+{
+  $bodyAttributes = null;
+}
+
 echo 
 $helper->renderDoctype(),
 $helper->renderHtmlTag(),
@@ -10,7 +19,7 @@ $helper->renderHtmlTag(),
     $helper->renderHead(),
   "\n</head>\n",
   
-  $helper->renderBodyTag('.theme'.$sf_user->getAttribute('theme')),
+  $helper->renderBodyTag($bodyAttributes),
   
     $sf_content,
     

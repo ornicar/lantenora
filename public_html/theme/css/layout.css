@@ -85,10 +85,3 @@ div.footer_part {
   margin: 1%;
   text-align: left;
 }
-
-/*
- * Themes
- */
- body.theme1 {
-   background: #000 url(../images/bg1.png) top left no-repeat;
-}
