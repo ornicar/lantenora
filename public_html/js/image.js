@@ -15,8 +15,8 @@
       self.$img = $('img.full_image', self.$wrap);
       
       this.prevNext();
-			
-			this.hotkeys();
+
+      this.hotkeys();
       
       if (self.$img[0].complete) 
       {
@@ -27,23 +27,23 @@
         self.$img.load(function() {self.element.image('imgLoaded');});
       }
     },
-		
-		hotkeys: function()
-		{
-			var self = this;
+
+    hotkeys: function()
+    {
+      var self = this;
 
       $(document)
-			.bindKey('esc', function() {
+      .bindKey('esc', function() {
         self.loading();
         location.href = $('#image_back').attr('href');
-				return false;
+        return false;
       })
       .bindKey('left', function() {
         self.loading();
         location.href = $('#prev_image').attr('href');
         return false;
       })
-			.bindKey('right', function() {
+      .bindKey('right', function() {
         self.loading();
         location.href = $('#next_image').attr('href');
         return false;
@@ -52,11 +52,11 @@
         $('#image_play').trigger('click');
         return false;
       });
-			
-			$('input, textarea').one('focus', function() {
-				$(document).unbindKey('space');
-			});
-		},
+
+      $('input, textarea').one('focus', function() {
+        $(document).unbindKey('space');
+      });
+    },
     
     imgLoaded: function()
     {
@@ -66,7 +66,7 @@
       {
         $('<img>').attr('src', self.options.preload_url);
       }
-			$('<img>').attr('src', $.dm.ctrl.options.relative_url_root+'/theme/images/load.gif');
+      $('<img>').attr('src', $.dm.ctrl.options.relative_url_root+'/theme/images/load.gif');
     },
     
     diapo: function()
@@ -83,7 +83,7 @@
       {
         self.timeout = setTimeout(function()
         {
-					self.loading();
+          self.loading();
           location.href = $('#next_image').attr('href') + '?diapo=1';
         }, self.options.diapo_delay);
         $('#image_play').stop().animate({
@@ -110,20 +110,20 @@
       });
     },
     
-		loading: function()
-		{
-			clearTimeout(this.timeout);
-			$('<div>')
-			.attr('id', 'full_screen_loading')
-			.appendTo($('body'))
-			.width($(window).width())
-			.height($(window).height());
-		},
-		
+    loading: function()
+    {
+      clearTimeout(this.timeout);
+      $('<div>')
+      .attr('id', 'full_screen_loading')
+      .appendTo($('body'))
+      .width($(window).width())
+      .height($(window).height());
+    },
+
     prevNext: function()
     {
-			var self = this;
-			
+      var self = this;
+
       $('#prev_image, #next_image').hover(function()
       {
         $(this).stop(false, true).fadeTo(200, 1);
@@ -131,10 +131,10 @@
       {
         $(this).stop(false, true).fadeTo(300, 0.1);
       });
-			
-			$('#prev_image, #next_image, #image_back').click(function() {
-				self.element.image('loading');
-		  });
+
+      $('#prev_image, #next_image, #image_back').click(function() {
+        self.element.image('loading');
+      });
     },
     
     resize: function(toSize)
