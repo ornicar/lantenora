@@ -12,10 +12,12 @@ generator:
       fields:
         is_active:
           label: Active
+        background_number:
+          label: Background
       list:
         display:
           - '=nom'
-          - background_number
+          - _background_number
           - is_active
         sort:
           - position

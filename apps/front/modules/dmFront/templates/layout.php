@@ -9,7 +9,7 @@ $helper->renderHtmlTag(),
   "\n<head>\n",
     $helper->renderHead(),
     sprintf(
-      '<style type="text/css">body {background: #000 url(/theme/images/bg%d.png) top left no-repeat;}</style>',
+      '<style type="text/css">body {background: #000 url(/theme/images/background/%d.jpg) top left no-repeat;}</style>',
       $helper->getOption('background_number', 1)
     ),
   "\n</head>\n",
