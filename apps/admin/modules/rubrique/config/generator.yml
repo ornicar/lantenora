@@ -15,6 +15,7 @@ generator:
       list:
         display:
           - '=nom'
+          - background_number
           - is_active
         sort:
           - position
@@ -27,7 +28,7 @@ generator:
           - is_active
       form:
         display:
-          NONE: [nom, is_active]
+          NONE: [nom, is_active, background_number]
         class: RubriqueAdminForm
         fields: {  }
       edit: ~

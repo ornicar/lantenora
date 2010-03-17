@@ -38,7 +38,7 @@ Lien:
       class:                LienType
       local:                lien_type_id
       foreign:              id
-      onDelete:             CASCADE
+      onDelete:             SET NULL
       foreignAlias:         Liens
 
 Rubrique:
@@ -46,6 +46,7 @@ Rubrique:
   columns:
     nom:                    { type: string(255), notnull: true, unique: true }
     is_active:              { type: boolean, notnull: true, default: true }
+    background_number:      { type: integer }
 
 Image:
   actAs:
@@ -65,13 +66,13 @@ Image:
       class:                DmUser
       local:                user_id
       foreignAlias:         Images
-      onDelete:             CASCADE
+      onDelete:             RESTRICT
     Media:
       class:                DmMedia
       local:                media_id
-      onDelete:             CASCADE
+      onDelete:             RESTRICT
     Rubrique:
-      onDelete:             CASCADE
+      onDelete:             RESTRICT
       foreignAlias:         Images
     Tags:
       class:                Tag

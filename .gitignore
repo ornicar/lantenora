@@ -9,7 +9,6 @@ public_html/dm*Plugin
 public_html/sf*
 public_html/uploads/*
 public_html/stats/*
-public_html/theme/images/themes.xcf
 lib/*/doctrine/base
 lib/*/doctrine/dm*Plugin/base
 
