@@ -20,12 +20,12 @@ div.image .t_image {
   color: #ccc;
   font-size: 25px;
   font-style: italic;
-  text-align: right;
+  text-align: left;
 }
 
 #prev_image,
 #next_image {
-	margin-top: 100px;
+  margin-top: 100px;
   width: 128px;
   height: 128px;
   display: none;
@@ -48,16 +48,16 @@ div.image .t_image {
 }
 
 #image_back {
-	width: 48px;
-	height: 48px;
+  width: 48px;
+  height: 48px;
   background: url(../images/back.png) top left no-repeat;
   opacity: 0.5;
-	
+
   position: fixed;
-	top: 5px;
-	left: 5px;
-	
-	font-size: 0;
+  top: 5px;
+  left: 5px;
+
+  font-size: 0;
   color: #000;
 }
 
@@ -90,11 +90,11 @@ div.image .t_image {
 }
 
 #diapo_image.diapo #image_play {
-	background-position: 0 -48px;
+  background-position: 0 -48px;
 }
 
 #image_back:hover, #diapo_image #image_play:hover {
-	opacity: 1;
+  opacity: 1;
 }
 
 div.image div.infos_box { 
@@ -127,43 +127,43 @@ div.image.list ul.elements {
 }
 
 .image li.medium_image {
-	width:160px;
-	height:160px;
-	background: #000;
-	border:7px solid #000;
-	border-top: 0;
-	border-left: 0;
-	margin: 5px 5px 0 0;
-	margin: 0;
-	
-	/* required to hide the image after resized */
-	overflow:hidden;
-	
-	/* for child absolute position */
-	position:relative;
-	
-	/* display div in line */
-	float:left;
+  width:160px;
+  height:160px;
+  background: #000;
+  border:7px solid #000;
+  border-top: 0;
+  border-left: 0;
+  margin: 5px 5px 0 0;
+  margin: 0;
+
+  /* required to hide the image after resized */
+  overflow:hidden;
+
+  /* for child absolute position */
+  position:relative;
+
+  /* display div in line */
+  float:left;
 }
 
 .image li.medium_image div.caption {
-	width:154px;
-	height:30px;
-	background:#000;
-	color:#fff;
-	font-weight:bold;
-		
-	/* fix it at the bottom */
-	position:absolute;
-	bottom:-1px; /* fix IE issue */
-	left:0;
+  width:154px;
+  height:30px;
+  background:#000;
+  color:#fff;
+  font-weight:bold;
 
-	/* hide it by default */
-	display:none;
+  /* fix it at the bottom */
+  position:absolute;
+  bottom:-1px; /* fix IE issue */
+  left:0;
 
-	/* opacity setting */
-	filter:alpha(opacity=70);    /* ie  */
-	opacity: 0.7;    /* css standard, currently it works in most modern browsers like firefox,  */
+  /* hide it by default */
+  display:none;
+
+  /* opacity setting */
+  filter:alpha(opacity=70);    /* ie  */
+  opacity: 0.7;    /* css standard, currently it works in most modern browsers like firefox,  */
   text-decoration:none;
   color:#fff;
   font-size:12px; 
@@ -171,6 +171,6 @@ div.image.list ul.elements {
 }
 
 .image li.medium_image img {
-	border:0;
-	position:absolute;
+  border:0;
+  position:absolute;
 }

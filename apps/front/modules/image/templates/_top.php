@@ -4,7 +4,8 @@
  * Vars : $image
  */
 
-echo £link($image)
-->text(£media($image->Media)->width(860)->overlay(£media('overlay/logo.png'), 'bottom-right'))
-->title($image->nom)
-;
+echo _tag('div.text_align_center',
+  _link($image)
+  ->text(£media($image->Media)->size(860, 570)->method('scale')->overlay(£media('overlay/logo.png'), 'bottom-right'))
+  ->title($image->nom)
+);
