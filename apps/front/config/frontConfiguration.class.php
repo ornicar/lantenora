@@ -35,7 +35,7 @@ class frontConfiguration extends dmFrontApplicationConfiguration
 
     if(!isset($backgroundNumber))
     {
-      $backgroundNumber = 1;
+      $backgroundNumber = 5;
     }
 
     $this->container->mergeParameter('layout_helper.options', array(
