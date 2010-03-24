@@ -74,6 +74,8 @@
     {
       //move the image in pixel
       var move = 5, width = 160, height = 160, zoomWidth = 170, zoomHeight = 170;
+
+      $elems.find('a').attr('title', null);
       
       $elems.hover(function()
       {
