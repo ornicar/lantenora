@@ -41,8 +41,8 @@ generator:
           - created_at
           - updated_at
         sort:
-          - position
-          - asc
+          - created_at
+          - desc
         table_method: getAdminListQuery
         table_count_method: ~
       filter:
