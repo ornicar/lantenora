@@ -12,5 +12,5 @@ public_html/uploads/*
 public_html/stats/*
 lib/*/doctrine/base
 lib/*/doctrine/dm*Plugin/base
-
+lib/migration/doctrine/
 nbproject
