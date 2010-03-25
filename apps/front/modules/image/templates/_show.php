@@ -1,4 +1,4 @@
-<?php use_helper('Date', 'Text', 'Bc');
+<?php use_helper('Date', 'Text');
 /*
  * Action for Image : Show
  * Vars : $image
