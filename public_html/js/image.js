@@ -66,7 +66,7 @@
       {
         $('<img>').attr('src', self.options.preload_url);
       }
-      $('<img>').attr('src', $.dm.ctrl.options.relative_url_root+'/theme/images/load.gif');
+      $('<img>').attr('src', dm_configuration.relative_url_root+'/theme/images/load.gif');
     },
     
     diapo: function()
@@ -171,10 +171,6 @@
       
       $('#prev_image, #next_image').css('margin-top', size[1]/2 - 64).show();
     }
-  });
-  
-  $.extend($.ui.image, {
-    getter: "resize imgLoaded loading"
   });
   
 })(jQuery);
