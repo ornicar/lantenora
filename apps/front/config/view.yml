@@ -20,8 +20,8 @@ default:
   javascripts:
     - lib.ui-core
     - lib.ui-widget
-    - front
     - image
+    - front
 
   has_layout:     true
   layout:         layout
