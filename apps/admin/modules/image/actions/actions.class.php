@@ -13,4 +13,19 @@ require_once dirname(__FILE__).'/../lib/imageGeneratorHelper.class.php';
  */
 class imageActions extends autoImageActions
 {
+  public function executeResort()
+  {
+    $images = dmDb::query('Image i')
+    ->orderBy('i.created_at DESC')
+    ->fetchRecords();
+
+    foreach($images as $index => $image)
+    {
+      $image->set('position', $index);
+    }
+
+    $images->save();
+
+    return $this->redirect('@image');
+  }
 }
