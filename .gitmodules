@@ -4,3 +4,6 @@
 [submodule "plugins/dmSqlBackupPlugin"]
 	path = plugins/dmSqlBackupPlugin
 	url = git://github.com/ornicar/dmSqlBackupPlugin.git
+[submodule "plugins/dmCommentPlugin"]
+	path = plugins/dmCommentPlugin
+	url = git://github.com/ornicar/dmCommentPlugin.git
