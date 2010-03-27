@@ -76,30 +76,8 @@ Image:
     Rubrique:
       onDelete:             RESTRICT
       foreignAlias:         Images
-    Tags:
-      class:                Tag
-      refClass:             ImageTag
     Commentaires:
       orderBy:              created_at ASC
-      
-ImageTag:
-  columns:
-    image_id:               { type: integer, primary: true }
-    tag_id:                 { type: integer, primary: true }
-  relations:
-    Image:
-      onDelete:             CASCADE
-    Tag:
-      onDelete:             CASCADE
-      
-Tag:
-  columns:
-    nom:                    { type: string(255), notnull: true }
-    strip:                  { type: string(255), notnull: true, unique: true }
-  relations:
-    Images:
-      class:                Image
-      refClass:             ImageTag
       
 Commentaire:
   actAs:                    [Timestampable]
