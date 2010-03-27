@@ -24,12 +24,12 @@ Project:
         list:  { cache: true }
         top:   { cache: false }
         listByRubrique: { filters: [ rubrique ], cache: true }
-        listByTag: { filters: [ tag ], cache: true }
+        listByDmTag: { filters: [ dmTag ], cache: true }
         listByAuteur: { filters: [ auteur ], cache: true }
   
   Tag:
   
-    tag:
+    dmTag:
       page:       true
       actions:
         list:  { cache: true }

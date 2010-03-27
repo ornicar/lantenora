@@ -73,7 +73,7 @@ class imageComponents extends dmFrontModuleComponents
     $this->imagePager = $this->getPager($query);
   }
 
-  public function executeListByTag()
+  public function executeListByDmTag()
   {
     $query = $this->getListQuery()->withDmMedia('Media');
     $this->imagePager = $this->getPager($query);

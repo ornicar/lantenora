@@ -2,17 +2,17 @@
     
 echo
 
-£o('div.commentaire_form_wrap.screen_center'),
+_open('div.commentaire_form_wrap.screen_center'),
 
-£('p.t_medium', 'Ajouter un commentaire'),
+_tag('p.t_medium', 'Ajouter un commentaire'),
 
 $form->open('.commentaire_form'),
 
-£('ul',
+_tag('ul',
 
-  £('li.clearfix', $form['auteur']->label()->field()->error()).
+  _tag('li.clearfix', $form['auteur']->label()->field()->error()).
 
-  £('li.clearfix', $form['texte']->label()->field()->error())
+  _tag('li.clearfix', $form['texte']->label()->field()->error())
   
 ),
 

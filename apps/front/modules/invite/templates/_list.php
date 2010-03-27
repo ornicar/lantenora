@@ -4,23 +4,23 @@
  * Vars : $invitePager
  */
 
-echo £o('div.invite.list');
+echo _open('div.invite.list');
 
  echo $invitePager->renderNavigationTop();
 
-  echo £o('ul.elements');
+  echo _open('ul.elements');
 
   foreach ($invitePager as $invite)
   {
-    echo £o('li.element');
+    echo _open('li.element');
     
-      echo £link($invite);
+      echo _link($invite);
       
-    echo £c('li');
+    echo _close('li');
   }
 
-  echo £c('ul');
+  echo _close('ul');
 
  echo $invitePager->renderNavigationBottom();
 
-echo £c('div');
+echo _close('div');

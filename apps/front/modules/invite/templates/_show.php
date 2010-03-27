@@ -4,8 +4,8 @@
  * Vars : $invite
  */
 
-echo £o('div.invite.show');
+echo _open('div.invite.show');
 
   echo $invite;
   
-echo £c('div');
+echo _close('div');

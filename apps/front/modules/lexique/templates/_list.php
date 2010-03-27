@@ -4,23 +4,23 @@
  * Vars : $lexiquePager
  */
 
-echo £o('div.lexique.list');
+echo _open('div.lexique.list');
 
  echo $lexiquePager->renderNavigationTop();
 
-  echo £o('ul.elements');
+  echo _open('ul.elements');
 
   foreach ($lexiquePager as $lexique)
   {
-    echo £o('li.element');
+    echo _open('li.element');
     
       echo $lexique;
       
-    echo £c('li');
+    echo _close('li');
   }
 
-  echo £c('ul');
+  echo _close('ul');
 
  echo $lexiquePager->renderNavigationBottom();
 
-echo £c('div');
+echo _close('div');

@@ -70,18 +70,18 @@ class imageActions extends dmFrontModuleActions
     {
       $item = new sfFeedItem();
       $item->setTitle($image->nom);
-      $item->setLink($this->getHelper()->£link($image)->getHref());
+      $item->setLink($this->getHelper()->link($image)->getHref());
       $item->setAuthorName($image->Auteur->username);
       $item->setPubdate($image->getDateTimeObject('created_at')->format('U'));
       $item->setUniqueId($image->nom.' ('.$image->id.')');
       
-      $description = $this->getHelper()->£link($image)->text($this->getHelper()->£media($image->Media)->width(600)).
+      $description = $this->getHelper()->link($image)->text($this->getHelper()->£media($image->Media)->width(600)).
       $this->context->get('markdown')->toHtml($image->description);
       
       $tagLinks = array();
       foreach($image->Tags as $tag)
       {
-        $tagLinks[] = $this->getHelper()->£link($tag);
+        $tagLinks[] = $this->getHelper()->link($tag);
       }
       
       if (count($tagLinks))

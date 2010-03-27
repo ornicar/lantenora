@@ -4,23 +4,23 @@
  * Vars : $rubriquePager
  */
 
-echo £o('div.rubrique.list');
+echo _open('div.rubrique.list');
 
  echo $rubriquePager->renderNavigationTop();
 
-  echo £o('ul.elements');
+  echo _open('ul.elements');
 
   foreach ($rubriquePager as $rubrique)
   {
-    echo £o('li.element');
+    echo _open('li.element');
     
-      echo £link($rubrique);
+      echo _link($rubrique);
       
-    echo £c('li');
+    echo _close('li');
   }
 
-  echo £c('ul');
+  echo _close('ul');
 
  echo $rubriquePager->renderNavigationBottom();
 
-echo £c('div');
+echo _close('div');

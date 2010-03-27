@@ -14,17 +14,9 @@ class ImageAdminForm extends BaseImageForm
   {
     parent::configure();
     
-    unset($this['tags_list']);
-
-    $this->widgetSchema['tags_text'] = new sfWidgetFormTextarea();
-
-    $this->validatorSchema['tags_text'] = new sfValidatorString(array('required' => false));
-    
-    $this->setDefault('tags_text', $this->object->getTagsText());
-    
     if ($this->object->isNew())
     {
-      $this->setDefault('user_id', dm::getUser()->getUserId());
+      $this->setDefault('user_id', $this->getService('user')->getUserId());
     }
     
     $this->unsetAutoFields();

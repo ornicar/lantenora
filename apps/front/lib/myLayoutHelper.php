@@ -11,7 +11,7 @@ class myLayoutHelper extends dmFrontLayoutHelper
   public function renderRssLink()
   {
     return sprintf('<link rel="alternate" type="application/rss+xml" title="Rss" href="%s" />',
-      $this->serviceContainer->getService('helper')->£link('@rss')->getHref()
+      $this->serviceContainer->getService('helper')->link('@rss')->getHref()
     );
   }
 }

@@ -4,10 +4,10 @@
  * Vars : $rubrique
  */
 
-echo £o('div.rubrique.show');
+echo _open('div.rubrique.show');
 
-  echo £('span.diapo_link.none');
+  echo _tag('span.diapo_link.none');
 
-  echo £('h1.t_big', £('span.title_prefix', 'Galerie').$rubrique);
+  echo _tag('h1.t_big', _tag('span.title_prefix', 'Galerie').$rubrique);
   
-echo £c('div');
+echo _close('div');

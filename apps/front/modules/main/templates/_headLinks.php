@@ -6,14 +6,14 @@ echo _link('@rss')
 ->set('.rss_link')
 ->title('Syndication RSS');
 
-echo £('ul',
+echo _tag('ul',
 
-  £('li', _link('tag/list')->text('Tags')).
+  _tag('li', _link('dmTag/list')->text('Tags')).
 
-  £('li', _link('lienType/list')->text('Liens')).
+  _tag('li', _link('lienType/list')->text('Liens')).
 
-  £('li', _link($auteurPage)->text('Auteur')).
+  _tag('li', _link($auteurPage)->text('Auteur')).
 
-  £('li', _link('invite/list')->text('Invités'))
+  _tag('li', _link('invite/list')->text('Invités'))
 
 );

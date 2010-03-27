@@ -4,26 +4,26 @@
  * Vars : $imagePager
  */
 
-echo £o('div.image.list.list_by_context.little');
+echo _open('div.image.list.list_by_context.little');
 
  echo $imagePager->renderNavigationTop();
 
- echo £o('ul.elements');
+ echo _open('ul.elements');
 
   foreach ($imagePager as $image)
   {
-    echo £o('li.element.medium_image');
+    echo _open('li.element.medium_image');
 
-      echo £link($image)->text(
+      echo _link($image)->text(
         £media($image->Media)
         ->size(120, 80)
       );
       
-    echo £c('li');
+    echo _close('li');
   }
 
-  echo £c('ul');
+  echo _close('ul');
 
  echo $imagePager->renderNavigationBottom();
 
-echo £c('div');
+echo _close('div');

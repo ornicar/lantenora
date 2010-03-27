@@ -4,8 +4,8 @@
  * Vars : $auteur
  */
 
-echo £o('div.auteur.show_name');
+echo _open('div.auteur.show_name');
 
-  echo £('h1.t_big', £('span.title_prefix', 'Auteur').$auteur->nom);
+  echo _tag('h1.t_big', _tag('span.title_prefix', 'Auteur').$auteur->nom);
   
-echo £c('div');
+echo _close('div');

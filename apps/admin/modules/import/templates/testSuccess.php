@@ -1,3 +1,3 @@
 <?php
 
-echo £('p', 'OK');
+echo _tag('p', 'OK');

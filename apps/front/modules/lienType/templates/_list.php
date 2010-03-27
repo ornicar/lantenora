@@ -4,37 +4,37 @@
  * Vars : $lienTypePager
  */
 
-echo £o('div.lien_type.list');
+echo _open('div.lien_type.list');
 
  echo $lienTypePager->renderNavigationTop();
 
-  echo £o('ul.elements');
+  echo _open('ul.elements');
 
   foreach ($lienTypePager as $lienType)
   {
-    echo £o('li.element');
+    echo _open('li.element');
     
-      echo £('h2.t_medium', $lienType);
+      echo _tag('h2.t_medium', $lienType);
 
-      echo £o('ul.liens');
+      echo _open('ul.liens');
       
       foreach($lienType->Liens as $lien)
       {
-        echo £('li',
-          £('h3.t_medium', £link($lien->url)->text($lien->nom.£('span.url', $lien->url))).
-          £('div.no_first_letter', 
+        echo _tag('li',
+          _tag('h3.t_medium', _link($lien->url)->text($lien->nom._tag('span.url', $lien->url))).
+          _tag('div.no_first_letter', 
             markdown($lien->description)
           )
         );
       }
 
-      echo £c('ul');
+      echo _close('ul');
 
-    echo £c('li');
+    echo _close('li');
   }
 
-  echo £c('ul');
+  echo _close('ul');
 
  echo $lienTypePager->renderNavigationBottom();
 
-echo £c('div');
+echo _close('div');

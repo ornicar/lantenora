@@ -1,9 +1,9 @@
 <?php
 
 echo
-  £link($image)->text(
+  _link($image)->text(
     £media($image->Media)
     ->size(160, 160)
     ->method('center').
-    £('div.caption', $image->nom)
+    _tag('div.caption', $image->nom)
   );

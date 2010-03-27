@@ -1,17 +1,17 @@
 <?php
 
-echo £o('div#dm_page'.($sf_user->getIsEditMode() ? '.edit' : ''));
+echo _open('div#dm_page'.($sf_user->getIsEditMode() ? '.edit' : ''));
 
 echo $helper->renderAccessLinks();
 
-  echo £('div.dm_layout',
+  echo _tag('div.dm_layout',
   
-    £('div.dm_layout_inner',
-      £('div.dm_layout_inner_inner.clearfix',
+    _tag('div.dm_layout_inner',
+      _tag('div.dm_layout_inner_inner.clearfix',
 
         $helper->renderArea('left').
     
-        £('div.dm_layout_center',
+        _tag('div.dm_layout_center',
           $helper->renderArea('top', '.clearfix').
           $helper->renderArea('content', '.clearfix')
         )
@@ -22,4 +22,4 @@ echo $helper->renderAccessLinks();
 
   );
 
-echo £c('div');
+echo _close('div');

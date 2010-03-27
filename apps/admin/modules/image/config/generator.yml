@@ -27,7 +27,7 @@ generator:
         is_active:
           label:                     "Publiée"
           help: "La photo est-elle visible sur le site ?"
-        tags_text:
+        tags:
           label:  Tags associés
       list:
         display:
@@ -51,7 +51,7 @@ generator:
         display:
           NONE: [nom, is_active, rubrique_id, is_top, date, user_id]
           Photo: [media_id_form, media_id_view]
-          Tags: [tags_text]
+          Tags: [tags]
           Description: [description]
         class: ImageAdminForm
         fields: {  }

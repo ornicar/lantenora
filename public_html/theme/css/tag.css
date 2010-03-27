@@ -1,4 +1,4 @@
-div.tag_list .link {
+div.dm_tag_list .link {
   font-size: 11px;
   line-height: normal;
   text-decoration: none;
@@ -6,15 +6,12 @@ div.tag_list .link {
   margin-bottom: 5px;
 }
 
-div.tag_cloud {
+div.dm_tag_cloud {
   margin: 10px;
 }
 
-div.tag_cloud li {
+div.dm_tag_cloud a.link {
   float: left;
   margin: 0 10px;
-}
-
-div.tag_cloud li .link {
   text-decoration: none;
 }

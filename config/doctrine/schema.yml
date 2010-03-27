@@ -8,6 +8,8 @@ Invite:
     is_active:              { type: boolean, notnull: true, default: true }
 
 DmUser:
+  actAs:
+    DmVersionable:
   columns:
     nom:                    { type: string(255), notnull: false }
     description:            { type: clob, extra: markdown }
@@ -50,8 +52,10 @@ Rubrique:
 
 Image:
   actAs:
-    Sortable:               { new: first }
+    DmTaggable:
+    DmSortable:               { new: first }
     Timestampable:
+    DmVersionable:
   columns:
     rubrique_id:            { type: integer, notnull: true }
     user_id:                { type: integer, notnull: true, default: 1 }

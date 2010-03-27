@@ -4,28 +4,28 @@
  * Vars : $commentairePager
  */
 
-echo £o('div#commentaires.commentaire.list_by_image.list.screen_center');
+echo _open('div#commentaires.commentaire.list_by_image.list.screen_center');
 
  echo $commentairePager->renderNavigationTop();
 
-  echo £o('ul.elements');
+  echo _open('ul.elements');
 
   foreach ($commentairePager as $commentaire)
   {
-    echo £o('li.element');
+    echo _open('li.element');
     
-      echo £("div.clearfix",
+      echo _tag("div.clearfix",
         £media("gravatar.jpg")->set(".fleft.imgleft").
-        £("p.date", format_date($commentaire->createdAt)).
-        £("p.auteur", auto_link_text($commentaire->auteur))
+        _tag("p.date", format_date($commentaire->createdAt)).
+        _tag("p.auteur", auto_link_text($commentaire->auteur))
       ).
-      £("div.texte", nl2br(auto_link_text($commentaire->texte)));
+      _tag("div.texte", nl2br(auto_link_text($commentaire->texte)));
       
-    echo £c('li');
+    echo _close('li');
   }
 
-  echo £c('ul');
+  echo _close('ul');
 
  echo $commentairePager->renderNavigationBottom();
 
-echo £c('div');
+echo _close('div');
