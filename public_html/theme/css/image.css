@@ -17,10 +17,10 @@ div#full_image {
 }
 
 div.image .t_image {
-  color: #ccc;
-  font-size: 25px;
+  color: #aaa;
+  font-size: 20px;
+  text-align: center;
   font-style: italic;
-  text-align: left;
 }
 
 #prev_image,

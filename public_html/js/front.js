@@ -50,7 +50,7 @@
     
     screenSize: function()
     {
-      var screenSize = [$(window).width() - 10, $(window).height()];
+      var screenSize = [$(window).width() - 10, $(window).height() - 25];
       
       if ($diapoImage = $('#diapo_image').orNot()) 
       {
