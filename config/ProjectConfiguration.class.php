@@ -10,6 +10,10 @@ class ProjectConfiguration extends dmProjectConfiguration
   {
     parent::setup();
 
+    $this->enablePlugins(array(
+      'dmTagPlugin'
+    ));
+
     $this->setWebDir(sfConfig::get('sf_root_dir').'/public_html');
   }
   

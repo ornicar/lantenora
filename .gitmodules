@@ -1,0 +1,3 @@
+[submodule "plugins/dmTagPlugin"]
+	path = plugins/dmTagPlugin
+	url = git://github.com/diem-project/dmTagPlugin.git
