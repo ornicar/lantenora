@@ -1,3 +1,6 @@
 [submodule "plugins/dmTagPlugin"]
 	path = plugins/dmTagPlugin
 	url = git://github.com/diem-project/dmTagPlugin.git
+[submodule "plugins/dmSqlBackupPlugin"]
+	path = plugins/dmSqlBackupPlugin
+	url = git://github.com/ornicar/dmSqlBackupPlugin.git

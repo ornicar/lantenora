@@ -11,7 +11,8 @@ class ProjectConfiguration extends dmProjectConfiguration
     parent::setup();
 
     $this->enablePlugins(array(
-      'dmTagPlugin'
+      'dmTagPlugin',
+      'dmSqlBackupPlugin'
     ));
 
     $this->setWebDir(sfConfig::get('sf_root_dir').'/public_html');
