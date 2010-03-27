@@ -46,11 +46,7 @@ Project:
   
   Commentaire:
   
-    commentaire:
-      parent:     image
-      actions:
-        listByImage: { filters: [ image ], cache: true }
-        form:
+    dmComment:
         
   Sitographie:
   

@@ -10,9 +10,9 @@ $form->open('.commentaire_form'),
 
 _tag('ul',
 
-  _tag('li.clearfix', $form['auteur']->label()->field()->error()).
+  _tag('li.clearfix', $form['author_name']->label('Auteur')->field()->error()).
 
-  _tag('li.clearfix', $form['texte']->label()->field()->error())
+  _tag('li.clearfix', $form['body']->label('Texte')->field()->error())
   
 ),
 

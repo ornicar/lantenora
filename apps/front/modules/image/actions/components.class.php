@@ -17,10 +17,11 @@ class imageComponents extends dmFrontModuleComponents
     $query = $this->getShowQuery('i')
     ->withDmMedia('Media')
     ->leftJoin('i.Auteur a')
-    ->leftJoin('i.Tags t')
-    ->leftJoin('i.Commentaires c ON c.image_id = i.id AND c.is_active = ?', true);
+    ->leftJoin('i.Tags t');
     
     $this->image = $this->getRecord($query);
+
+    $this->commentaires = $this->image->getComments();
     
     $this->preloadPages($this->image->Tags);
     

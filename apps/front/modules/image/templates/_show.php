@@ -45,7 +45,7 @@ echo _tag("div.top",
   _tag("div.sep", "|").
   _tag("div", $image->date ? $image->date : format_date($image->createdAt)).
   _tag("div.sep", "|").
-  _tag("div", _link("#commentaires")->text(plural("commentaire", count($image->Commentaires))))
+  _tag("div", _link("#commentaires")->text(plural("commentaire", count($commentaires))))
 );
 
 echo _open("ul.image_tags.clearfix");
@@ -61,22 +61,22 @@ echo _open("div.description_technique.clearfix");
 
 echo _tag('div#description', markdown($image->description));
 
-if ($image->Commentaires->count())
+if (!empty($commentaires))
 {
   echo _open('div.commentaire.list_by_image.list');
 
     echo _open('ul.elements');
   
-    foreach ($image->Commentaires as $commentaire)
+    foreach ($commentaires as $commentaire)
     {
       echo _open('li.element');
       
         echo _tag("div.clearfix",
           _media("gravatar.jpg")->set(".fleft.imgleft").
           _tag("p.date", format_date($commentaire->createdAt)).
-          _tag("p.auteur", auto_link_text(escape($commentaire->auteur)))
+          _tag("p.auteur", auto_link_text(escape($commentaire->authorName)))
         ).
-        _tag("div.texte", nl2br(auto_link_text(escape($commentaire->texte))));
+        _tag("div.texte", nl2br(auto_link_text(escape($commentaire->body))));
         
       echo _close('li');
     }

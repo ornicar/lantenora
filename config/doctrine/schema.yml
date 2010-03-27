@@ -52,6 +52,7 @@ Image:
   actAs:
     DmTaggable:
     DmSortable:               { new: first }
+    DmCommentable:
     Timestampable:
     DmVersionable:
   columns:
@@ -77,17 +78,4 @@ Image:
       onDelete:             RESTRICT
       foreignAlias:         Images
     Commentaires:
-      orderBy:              created_at ASC
-      
-Commentaire:
-  actAs:                    [Timestampable]
-  columns:
-    image_id:               { type: integer, notnull: true }
-    auteur:                 { type: string(255) }
-    texte:                  { type: clob }
-    is_active:              { type: boolean, notnull: true, default: true }
-  relations:
-    Image:
-      onDelete:             CASCADE
-      foreignAlias:         Commentaires
       orderBy:              created_at ASC

@@ -1,17 +1,11 @@
-div.commentaire.list {
-	margin-right: 320px;
-	font-size: 12px;
+div.commentaire.list ul.elements {
+  text-align: left;
 }
 
-div.commentaire.list ul.elements {
-  border: 1px solid #222;
-  border-bottom: none;
-}
 div.commentaire.list li.element {
-  border-bottom: 1px solid #222;
+  border: 1px solid #222;
   padding: 12px;
-}
-div.commentaire.list li.element.pair {
+  margin-bottom: 12px;
   background: #111;
 }
 

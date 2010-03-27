@@ -5,8 +5,7 @@ class commentaireComponents extends myAdminBaseComponents
   
   public function executeLast(dmWebRequest $request)
   {
-    $this->commentaires = dmDb::query('Commentaire c, c.Image i')
-    ->select('c.id, c.created_at, c.auteur, i.nom')
+    $this->commentaires = dmDb::query('DmComment c')
     ->orderBy('c.created_at desc')
     ->limit(6)
     ->fetchRecords();
