@@ -8,8 +8,6 @@ Invite:
     is_active:              { type: boolean, notnull: true, default: true }
 
 DmUser:
-  actAs:
-    DmVersionable:
   columns:
     nom:                    { type: string(255), notnull: false }
     description:            { type: clob, extra: markdown }
