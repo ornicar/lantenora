@@ -8,6 +8,7 @@
  * To make redirections or manipulate database, use the actions class.
  * 
  * 
+ * 
  */
 class mainComponents extends dmFrontModuleComponents
 {
@@ -31,6 +32,11 @@ class mainComponents extends dmFrontModuleComponents
     ->withI18n()
     ->fetchOne();
     // Your code here
+  }
+
+  public function executeSitemap()
+  {
+    $this->sitemap = $this->getService('sitemap_menu')->build();
   }
 
 

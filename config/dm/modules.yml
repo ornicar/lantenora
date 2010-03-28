@@ -6,6 +6,7 @@ Project:
       actions:
         footer: { cache: static }
         headLinks: { cache: true }
+        sitemap: { cache: true }
       
   Image:
   
