@@ -12,5 +12,18 @@
  */
 class Rubrique extends BaseRubrique
 {
-  
+  public function preSave($event)
+  {
+    if(array_key_exists('is_active', $this->getModified()))
+    {
+      foreach($this->get('Images') as $image)
+      {
+        $image->set('is_active', $this->get('is_active'));
+      }
+
+      $this->get('Images')->save();
+    }
+
+    return parent::preSave($event);
+  }
 }
