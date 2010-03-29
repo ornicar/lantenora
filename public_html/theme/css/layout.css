@@ -57,7 +57,7 @@ body.full_screen .dm_layout_center {
   width: 100%;
 }
 
-body.full_screen .dm_content {
+body.full_screen .dm_page_content {
   padding: 0;
   background: #000;
 }
