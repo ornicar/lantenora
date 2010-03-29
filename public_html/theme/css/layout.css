@@ -46,7 +46,7 @@ div.dm_layout_inner_inner {
   background: #1D1D1D;
 }
 
-.dm_content {
+.dm_page_content {
   padding: 5px 9px 0 9px;
   background: transparent url(../images/bg_center.png) top left no-repeat;
   min-height: 600px;

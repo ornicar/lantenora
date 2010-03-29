@@ -9,16 +9,16 @@ echo $helper->renderAccessLinks();
     _tag('div.dm_layout_inner',
       _tag('div.dm_layout_inner_inner.clearfix',
 
-        $helper->renderArea('left').
+        $helper->renderArea('layout.left').
     
         _tag('div.dm_layout_center',
-          $helper->renderArea('top', '.clearfix').
-          $helper->renderArea('content', '.clearfix')
+          $helper->renderArea('layout.top', '.clearfix').
+          $helper->renderArea('page.content', '.clearfix')
         )
       )
     ).
 
-    $helper->renderArea('bottom', '.clearfix')
+    $helper->renderArea('layout.bottom', '.clearfix')
 
   );
 
