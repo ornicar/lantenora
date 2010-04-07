@@ -24,7 +24,7 @@ div.rubrique.list {
 
 div.preface {
   margin-top: 3px;
-  background: #fff url(../images/dirtypaper.jpg) top left no-repeat;
+  background: #fff url(../images/dirtypaper.jpg) top left repeat-y;
   color: #000;
   font-family: "monospace";
 }
@@ -48,7 +48,6 @@ div.preface a.next_page {
 }
 
 .preface_text {
-  font-size: 0.9em;
   padding: 1em 1em 0 1em;
 }
 
