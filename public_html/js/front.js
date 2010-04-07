@@ -20,6 +20,16 @@
     }
   });
 
+  // show rubrique preface
+  if($preface = $('div.preface').orNot())
+  {
+    $preface.find('a.close_preface').click(function()
+    {
+      $preface.fadeOut(500);
+    });
+  }
+
+  // animate thumbnails
   if ($elems = $('div.image li.medium_image').orNot())
   {
     //move the image in pixel
@@ -35,9 +45,7 @@
         'height': zoomHeight,
         'top': -move,
         'left': -move
-      }, {
-        duration: 200
-      });
+      }, { duration: 200 });
 
       //Display the caption
       $(this).find('div.caption').stop(false, true).fadeIn(200);
@@ -49,9 +57,7 @@
         'height': height,
         'top': '0',
         'left': '0'
-      }, {
-        duration: (300)
-      });
+      }, { duration: (300) });
 
       //Hide the caption
       $(this).find('div.caption').stop(false, true).fadeOut(300);

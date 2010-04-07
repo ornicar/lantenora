@@ -6,7 +6,10 @@
 
 echo _open('div.image.list.list_by_rubrique.clearfix');
 
- echo $imagePager->renderNavigationTop();
+  if($rubrique->Preface && $rubrique->Preface->exists())
+  {
+    include_partial('rubrique/preface', array('preface' => $rubrique->Preface));
+  }
 
   echo _open('ul.elements.clearfix');
 
@@ -20,7 +23,5 @@ echo _open('div.image.list.list_by_rubrique.clearfix');
   }
 
   echo _close('ul');
-
- echo $imagePager->renderNavigationBottom();
 
 echo _close('div');

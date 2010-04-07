@@ -27,6 +27,9 @@ Project:
         listByRubrique: { filters: [ rubrique ], cache: true }
         listByDmTag: { filters: [ dmTag ], cache: true }
         listByAuteur: { filters: [ auteur ], cache: true }
+
+    preface:
+      name:       Préface
   
   Tag:
   

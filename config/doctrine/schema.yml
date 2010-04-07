@@ -47,6 +47,10 @@ Rubrique:
     nom:                    { type: string(255), notnull: true, unique: true }
     is_active:              { type: boolean, notnull: true, default: true }
     background_number:      { type: integer }
+  relations:
+    Preface:
+      local:                id
+      foreign:              rubrique_id
 
 Image:
   actAs:
@@ -79,3 +83,22 @@ Image:
       foreignAlias:         Images
     Commentaires:
       orderBy:              created_at ASC
+
+Preface:
+  actAs:                  [Timestampable]
+  columns:
+    rubrique_id:          { type: integer, notnull: false, unique: true }
+    nom:                  { type: string(255), notnull: true }
+    description:          { type: clob, extra: markdown }
+    image_id:             { type: integer, notnull: true }
+    is_active:            { type: boolean, notnull: true, default: true }
+  relations:
+    Rubrique:
+      onDelete:           SET NULL
+      foreignAlias:       Preface
+      local:              rubrique_id
+      foreign:            id
+    Image:
+      class:              DmMedia
+      local:              image_id
+      onDelete:           RESTRICT
