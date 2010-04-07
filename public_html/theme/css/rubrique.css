@@ -51,6 +51,10 @@ div.preface a.next_page {
   padding: 1em 1em 0 1em;
 }
 
+.preface_text p {
+  text-indent: 2em;
+}
+
 .preface_title {
   font-size: 1.5em;
   padding: 1em 110px 0 1em;
