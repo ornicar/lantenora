@@ -52,10 +52,10 @@ class imageComponents extends dmFrontModuleComponents
       ->where('i.id = ?', $this->nextPage->recordId)
       ->fetchOne();
       
-      $this->preloadImage = $this->context->getHelper()->£media($nextRecord->Media)
+      $this->preloadImage = $this->context->getHelper()->media($nextRecord->Media)
       ->size($this->maxSize)
       ->method('scale')
-      ->overlay($this->context->getHelper()->£media('overlay/logo.png'), 'bottom-right')
+      ->overlay($this->context->getHelper()->media(sfConfig::get('app_image_signature')), 'bottom-right')
       ->getSrc();
     }
     

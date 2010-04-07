@@ -1,3 +1,4 @@
 all:
   image:
     description_truncate: 220
+    signature:            overlay/signature.png

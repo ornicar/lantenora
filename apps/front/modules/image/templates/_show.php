@@ -20,7 +20,7 @@ echo _tag('div#image_help',
 $media = _media($image->Media)
 ->size($maxSize)
 ->method('scale')
-->overlay(_media('overlay/logo.png'), 'bottom-right');
+->overlay(_media(sfConfig::get('app_image_signature')), 'bottom-right');
 
 $realSize = $media->getRealSize();
 $htmlSize = $sf_user->getBestSize($realSize);
