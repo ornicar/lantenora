@@ -1,6 +1,6 @@
 <?php
 
-require_once(dmOs::join(dm::getDir(), 'dmUserPlugin/modules/dmUser/lib/base/BaseDmUserAdminForm.php'));
+require_once(dmOs::join(sfConfig::get('dm_core_dir'), 'plugins/dmUserPlugin/modules/dmUserAdmin/lib/base/BaseDmUserAdminForm.php'));
 
 class auteurAdminForm extends BaseDmUserAdminForm
 {
