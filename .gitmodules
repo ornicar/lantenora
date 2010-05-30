@@ -7,3 +7,6 @@
 [submodule "plugins/dmCommentPlugin"]
 	path = plugins/dmCommentPlugin
 	url = git://github.com/ornicar/dmCommentPlugin.git
+[submodule "plugins/dmBotPlugin"]
+	path = plugins/dmBotPlugin
+	url = git://github.com/ornicar/dmBotPlugin.git

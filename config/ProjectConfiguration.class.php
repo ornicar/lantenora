@@ -13,6 +13,7 @@ class ProjectConfiguration extends dmProjectConfiguration
     $this->enablePlugins(array(
       'dmTagPlugin',
       'dmSqlBackupPlugin',
+      'dmBotPlugin',
       'dmCommentPlugin'
     ));
 
