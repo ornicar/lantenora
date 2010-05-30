@@ -6,7 +6,15 @@
 
 echo _open('div.auteur.show');
 
-  echo $auteur->Media->exists() ? £media($auteur->Media)->width(300)->set('.auteur_image') : '';
+echo _tag('div.auteur_images',
+  ($auteur->Media->exists() ? _media($auteur->Media)->width(321)->set('.auteur_image') : '').
+  dm_get_widget('image', 'listByAuteur', array(
+    'dm_user_id' => $auteur->id,
+    'orderField' => 'created_at',
+    'orderType' => 'asc',
+    'maxPerPage' => 30,
+  ))
+);
   
   echo _tag('div.auteur_text', markdown($auteur->description));
   

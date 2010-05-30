@@ -20,9 +20,15 @@ div.auteur.show {
 img.auteur_image {
   float: left;
   border: 3px solid #555;
-  margin: 0 10px 10px 0;
+  margin: 0 10px 10px 7px;
 }
 
 div.auteur_text {
   margin: 20px 0 0 20px;
+}
+
+div.auteur_images {
+  float: left;
+  width: 342px;
+  margin-right: 1em;
 }
