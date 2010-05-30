@@ -6,7 +6,7 @@ logs
 data/dm/*
 public_html/cache/*
 public_html/.htaccess
-public_html/Plugin
+public_html/*Plugin
 public_html/sf
 public_html/uploads/*
 public_html/stats/*

@@ -1,9 +1,9 @@
 .t_site, #dm_page .t_site {
   color: #000;
   font-size: 0;
-  background: url(../images/logo200alpha.png) top left no-repeat;
+  background: url(../images/logo200alpha2.png) top left no-repeat;
   width: 200px;
-  height: 57px;
+  height: 73px;
   display: block;
   margin: 5px 0 0 -70px;
 }

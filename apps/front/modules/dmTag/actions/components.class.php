@@ -19,7 +19,7 @@ class dmTagComponents extends BasedmTagComponents
     
     $this->tags = $q->fetchRecords()->getData();
     
-    usort($this->tags, create_function('$a, $b', 'return strcmp(strtolower($a->get("name")), strtolower($b->get("name")));'));
+    usort($this->tags, create_function('$a, $b', 'return strcmp(dmString::transliterate($a->get("name")), dmString::transliterate($b->get("name")));'));
     
     $this->preloadPages($this->tags);
   }
