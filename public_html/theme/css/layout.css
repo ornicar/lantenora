@@ -6,7 +6,8 @@ html {
 #dm_page, #dm_page a {
   color: #ccc;
   font-family: arial,helvetica,verdana,sans-serif;
-  font-family: 'Trebuchet MS',Tahoma,Verdana,Geneva,Arial;
+  font-family: "monospace";
+  /*font-family: 'Trebuchet MS',Tahoma,Verdana,Geneva,Arial;*/
 }
 
 #dm_page, #dm_page a:hover {
@@ -39,11 +40,31 @@ div.dm_layout_inner_inner {
 .dm_layout_top {
 }
 
-.dm_layout_bottom {
+div.main_footer {
   color: #aaa;
+  margin-top: 30px;
   padding: 20px;
-  padding-bottom: 10px;
+  padding-bottom: 30px;
   background: #1D1D1D;
+  border: 1px solid #333;
+  border-left: 0;
+  border-right: 0;
+}
+
+div.main_footer .liens {
+  text-align: right;
+}
+
+div.main_footer .link{
+  text-decoration: none;
+  margin-left: 3em;
+}
+
+div.main_footer hr {
+    color: #333;
+    background-color: #333;
+    height: 1px;
+    border: none;
 }
 
 .dm_page_content {
@@ -69,8 +90,7 @@ body.full_screen div.dm_layout_inner_inner {
 }
 
 body.full_screen .dm_layout_bottom {
-  padding: 0;
-  background: #000;
+  display: none;
 }
 
 .screen_center { 

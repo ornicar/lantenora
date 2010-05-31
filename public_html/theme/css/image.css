@@ -133,7 +133,6 @@ div.image.list ul.elements {
   border:7px solid #000;
   border-top: 0;
   border-left: 0;
-  margin: 5px 5px 0 0;
   margin: 0;
 
   /* required to hide the image after resized */
@@ -173,4 +172,8 @@ div.image.list ul.elements {
 .image li.medium_image img {
   border:0;
   position:absolute;
+}
+
+.image_top .link img {
+  -moz-box-shadow: -5px -5px 10px black;
 }

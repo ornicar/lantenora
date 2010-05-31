@@ -20,18 +20,22 @@ class mainComponents extends dmFrontModuleComponents
 
   public function executeFooter()
   {
-    // Your code here
+    $this->auteurPage = $this->getAuteur();
   }
 
   public function executeHeadLinks()
   {
-    $this->auteurPage = dmDb::query('DmPage p')
+    $this->auteurPage = $this->getAuteur();
+  }
+
+  protected function getAuteur()
+  {
+    return dmDb::query('DmPage p')
     ->where('p.module = ?', 'auteur')
     ->andWhere('p.action = ?', 'show')
     ->andWhere('p.record_id = ?', 2)
     ->withI18n()
     ->fetchOne();
-    // Your code here
   }
 
   public function executeSitemap()

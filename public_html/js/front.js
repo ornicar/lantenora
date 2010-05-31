@@ -33,31 +33,31 @@
   if ($elems = $('div.image li.medium_image').orNot())
   {
     //move the image in pixel
-    var move = 5, width = 160, height = 160, zoomWidth = 170, zoomHeight = 170;
+    //var move = 5, width = 160, height = 160, zoomWidth = 170, zoomHeight = 170;
 
     $elems.find('a').attr('title', null);
 
     $elems.hover(function()
     {
       //Move and zoom the image
-      $(this).find('img').stop(false, true).animate({
-        'width': zoomWidth,
-        'height': zoomHeight,
-        'top': -move,
-        'left': -move
-      }, { duration: 200 });
+      //$(this).find('img').stop(false, true).animate({
+        //'width': zoomWidth,
+        //'height': zoomHeight,
+        //'top': -move,
+        //'left': -move
+      //}, { duration: 200 });
 
       //Display the caption
       $(this).find('div.caption').stop(false, true).fadeIn(200);
     }, function()
     {
       //Reset the image
-      $(this).find('img').stop(false, true).animate({
-        'width': width,
-        'height': height,
-        'top': '0',
-        'left': '0'
-      }, { duration: (300) });
+      //$(this).find('img').stop(false, true).animate({
+        //'width': width,
+        //'height': height,
+        //'top': '0',
+        //'left': '0'
+      //}, { duration: (300) });
 
       //Hide the caption
       $(this).find('div.caption').stop(false, true).fadeOut(300);

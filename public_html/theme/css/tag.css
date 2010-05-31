@@ -1,17 +1,24 @@
-div.dm_tag_list .link {
+#dm_page div.dm_tag_list .link {
   font-size: 11px;
   line-height: normal;
   text-decoration: none;
   display: block;
   margin-bottom: 5px;
+  color: #888;
 }
 
 div.dm_tag_cloud {
   margin: 10px;
 }
 
-div.dm_tag_cloud a.link {
+#dm_page div.dm_tag_cloud a.link {
   float: left;
   margin: 0 10px;
   text-decoration: none;
+  color: #888;
+}
+
+#dm_page div.dm_tag_cloud a.link:hover {
+  color: #FFF;
+  text-shadow: 0 0 2px #AAA;
 }

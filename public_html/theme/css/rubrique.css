@@ -3,23 +3,27 @@ div.rubrique.list {
 }
 
 #dm_page div.rubrique.list .link {
-  color: #aaa;
+  color: #999;
   height: 40px;
   line-height: 40px;
   padding-left: 12px;
   text-decoration: none;
   display: block;
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 18px;
   letter-spacing: 2px;
-  -moz-border-radius: 4px;
+  text-shadow:0 -1px 2px rgba(255, 255, 255, 0.65);
 }
 
 #dm_page div.rubrique.list .link.dm_current,
-#dm_page div.rubrique.list .link.dm_parent,
-#dm_page div.rubrique.list a.link:hover {
+#dm_page div.rubrique.list .link.dm_parent {
   background: url(../images/rubrique_over.png) top left repeat-y;
   color: #000;
+  text-shadow:0 -1px 2px rgba(255, 255, 255, 0.65);
+}
+
+#dm_page div.rubrique.list a.link:hover {
+  color: #FFF;
+  text-shadow: 0 -1px 2px #fff;
 }
 
 div.preface {

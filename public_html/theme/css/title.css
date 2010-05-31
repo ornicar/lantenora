@@ -15,14 +15,17 @@
 
 .t_big {
   font-size:20px;
-  text-align: right;
+  /*text-align: right;*/
   text-transform: uppercase;
+  letter-spacing: 5px;
+  /*text-shadow:1px 1px 3px #000000;*/
 }
 
 .t_big span.title_prefix {
   text-transform: uppercase;
   color: #777;
   margin-right: 10px;
+  letter-spacing: normal;
 }
 
 .t_medium {
